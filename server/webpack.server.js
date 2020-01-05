@@ -18,7 +18,8 @@ const config = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build')
   },
-
+  
+  // Do not bundle any libraries into our out bundle on server if that library exists inside node module folder
   externals: [webpackNodeExternals()]
 };
 
